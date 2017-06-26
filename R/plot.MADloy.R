@@ -1,3 +1,7 @@
+#' Plot of MADloy object
+#' 
+#' This function plots the summarized LRR of a set of samples
+#' 
 #' @param print.labels should sample labels be showed
 #' @param threshold threshold to draw sample labels 
 #' @param cex.label size of the labels

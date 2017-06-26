@@ -5,7 +5,7 @@
 \title{Check the mean LRR values in msY region to detect Loss of Y events in a folder or files.}
 \usage{
 madloy(files, target.region, ref.region = "Autosomes", rsCol = 1,
-  ChrCol = 2, PosCol = 3, LRRCol = 4, trim = 0, mc.cores,
+  ChrCol = 2, PosCol = 3, LRRCol = 4, trim = 0.05, offset, mc.cores,
   quiet = FALSE, hg = "hg18", ...)
 }
 \arguments{
@@ -28,7 +28,9 @@ region in UCSC style (i.e. "chr21" or "chr21:1000-10000").}
 
 \item{LRRCol}{The position of the column with the LRR identifier.}
 
-\item{trim}{trim the fraction (0 to 0.5) of probes to be trimmed when summaryzing LRR.}
+\item{trim}{trim the fraction (0 to 0.5) of probes to be trimmed when summaryzing LRR. By default is 0.05.}
+
+\item{offset}{median value of summarized LRR at target region}
 
 \item{mc.cores}{The number of cores used to perform the function. By default 
 is set to 1.}

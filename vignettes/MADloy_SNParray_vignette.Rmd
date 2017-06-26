@@ -44,10 +44,10 @@ library(MADloy)
 
 We have prepared a set of data files including 124 males and 2 females to be used as an illustrative example about how to get mLRR-Y data of each sample. Files and data have been anonymized and belongs to individuals from general population. These files are encapsulated into our package `LOYdata` that can be downloaded from this link [LOYdata](https://goo.gl/tZu2Pt) (NOTE: a GitHub repository is being created):
 
-Then, the package can be installed into your computer by executing:
+Then, the package can be installed into your computer by executing (NOTE: before executing thi coed, set working directory into the one having the downloaded packages):
 
 ```{r eval=FALSE}
-install.packages("LOYdata_0.0.99.tar.gz", repos=NULL, 
+install.packages("LOYdata_0.1.0.tar.gz", repos=NULL, 
                  type="source")
 ```
 
@@ -76,9 +76,7 @@ The function `madloy` processes individual SNP array data in [pennCNV format](ht
 
 LOY association studies are perfomed only using male samples. Obviously, clinical data can be used to filter such individuals. However, in some ocassions there are errors in those databases that can be detected by using genomic data. The function `checkSex` can be used to further verify that there are no female samples in our data. Let us perform this filtering using HapMap data 
 
-```{r, check_sex}
-dd <- dir(rawDataPath, full.names=TRUE)[1:10]
-sex <- checkSex(dd)
+```{r, check_sex, cache=TRUE}
 sex <- checkSex(rawDataPath)
 ```
 This function only requires the path containing the raw data in pennCNV format. By default the function is assuming that the LRR information is in column number 4. This can be changed through the argument `LRRCol`. 
