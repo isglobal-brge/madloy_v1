@@ -1,0 +1,12 @@
+base
+BiocStyle
+data.table
+BiocGenerics
+S4Vectors
+IRanges
+GenomeInfoDb
+GenomicRanges
+RUnit
+DistributionUtils
+GeneralizedHyperbolic
+MADloy

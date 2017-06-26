@@ -1,0 +1,38 @@
+Package: MADloy
+Type: Package
+Title: Package to detect mosaic LOY from SNP array data
+Version: 0.9.5-30
+Date: 2017-05-25
+Author: Marcos Lopez-Sanchez and Juan R Gonzalez
+Maintainer: Juan R Gonzalez <juanr.gonzalez@isglobal.org>
+Depends:
+    BiocStyle,
+    data.table,
+    GenomicRanges,
+    GeneralizedHyperbolic,
+    R (>= 3.2.0),
+Imports:
+    BiocGenerics,
+    ecolitk,
+    GenomeInfoDb,
+    gplots,
+    IRanges,
+    mixtools,
+    parallel,
+    plotrix,
+    Rsamtools,
+    TEQC,
+    wordcloud
+Description: This packages is a suit of functions to process SNP array data in pennCNV format (e.g. having
+             snp_name, chromosome, position, LRR, BAF and genotype). There are functions to perform 
+             filtering, quality control of samples and to process raw data to extract
+             the LRR and BAF information of required genomic regions.
+License: GPL (>= 2)
+URL: http://www.creal.cat/brge and http://www.creal.cat/jrgonzalez/software.htm
+VignetteBuilder: knitr
+Suggests:
+    BiocStyle,
+    knitr,
+    rmarkdown
+LazyData: TRUE
+RoxygenNote: 6.0.1
