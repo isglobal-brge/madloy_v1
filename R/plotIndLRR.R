@@ -79,11 +79,11 @@ plotIndLRR <- function(x, sample, rsCol=1, ChrCol=2, PosCol=3, LRRCol=4, ...) {
    plot(pos.target, lrr.target, ylab="LRR", xlab="Position (Mb) - Chr Y", type="n", ...)
     uu <- par("usr")
   }
+  rect(7e6, uu[4], 25e6, uu[3], col="MistyRose")
   points(pos.target, lrr.target, pch=16, cex=0.7, col="brown")
   title(tt)
   abline(h=0, col="red", lty=2, lwd=2)
   abline(h=x$par$offset, col="orange", lty=2, lwd=2)
   hh <- x$target[[ss]]$summary
   segments(7e6, hh, 25e6, col="blue", lwd=3)
-  rect(7e6, uu[4], 25e6, uu[3], col="MistyRose")
 }
