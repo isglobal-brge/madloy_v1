@@ -101,7 +101,8 @@ checkSex <- function(files, rsCol = 1, ChrCol = 2, PosCol = 3, LRRCol = 4, mc.co
     par$trim <- trim
     par$offsetY <- offsetY
     par$offsetX <- offsetX
-    par$files <- files
+    par$path <- files
+    par$files <- allfiles
     
     res <- list(data = data, class = class, par = par)
     class(res) <- "checkSex"

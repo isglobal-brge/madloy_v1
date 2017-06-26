@@ -42,20 +42,13 @@ Then the package is loaded as usual
 library(MADloy)
 ```
 
-We have prepared a set of data files including 124 males and 2 females to be used as an illustrative example about how to get mLRR-Y data of each sample. Files and data have been anonymized and belongs to individuals from general population. These files are encapsulated into our package `LOYdata` that can be downloaded from this link [LOYdata](https://goo.gl/tZu2Pt) (NOTE: a GitHub repository is being created):
+We have prepared a set of data files including 124 males and 2 females to be used as an illustrative example about how to get mLRR-Y data of each sample. Files and data have been anonymized and belongs to individuals from general population. These files can be downloaded from this link [LOYdata](https://goo.gl/tZu2Pt). 
 
-Then, the package can be installed into your computer by executing (NOTE: before executing thi coed, set working directory into the one having the downloaded packages):
 
-```{r eval=FALSE}
-install.packages("LOYdata_0.1.0.tar.gz", repos=NULL, 
-                 type="source")
-```
-
-The package includes one file per sample in the required format of `madloy` that is described in the next section. The path indicating where the raw data (pennCNV format) is available can be obtained by executing:
+The zipped file includes one file per sample in the required format to be processed with `MADloy` package. This format is described in the next section. Decompress the files in a folder and set this folder path in an R object (for instance `rawDataPath`). 
 
 
 ```{r, get_data_path}
-# rawDataPath <- system.file("extdata", "rawData", package = "LOYdata")
 rawDataPath <- "C:/Juan/CREAL/MADloy/rawData"
 rawDataPath
 files <- dir(rawDataPath)
