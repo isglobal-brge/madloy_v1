@@ -77,7 +77,7 @@ The function `madloy` processes individual SNP array data in [pennCNV format](ht
 LOY association studies are perfomed only using male samples. Obviously, clinical data can be used to filter such individuals. However, in some ocassions there are errors in those databases that can be detected by using genomic data. The function `checkSex` can be used to further verify that there are no female samples in our data. Let us perform this filtering using HapMap data 
 
 ```{r, check_sex, cache=TRUE}
-sex <- checkSex(rawDataPath)
+sex <- checkSex(rawDataPath, mc.cores=20)
 ```
 This function only requires the path containing the raw data in pennCNV format. By default the function is assuming that the LRR information is in column number 4. This can be changed through the argument `LRRCol`. 
 
@@ -106,7 +106,7 @@ Second, some of the existing algorithms used to get LRR information do not norma
 The `madloy` function is design to process LRR files and only requires the path where those files are located. Let us illustrate how to get summarized data of our illustrative example available at `LOYdata` package (see Getting Started section). 
 
 ```{r, madloy_example, cache=TRUE}
-ex <- madloy(rawDataPath)
+ex <- madloy(rawDataPath, mc.cores=20)
 ```
 
 The function creates an object of class `MADloy` that can be inspected by using the generic `print` function.
